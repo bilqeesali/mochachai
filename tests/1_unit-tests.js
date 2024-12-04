@@ -16,7 +16,7 @@ suite('Unit Tests', function () {
     });
     // #3
     test('#isOk, #isNotOk', function () {
-      assert.isNotOk(null, 'null is falsey');
+      assert.isOk(null, 'null is falsey');
       assert.isOk("I'm truthy", 'A string is truthy');
       assert.isOk(true, 'true is truthy');
     });
@@ -24,7 +24,7 @@ suite('Unit Tests', function () {
     test('#isTrue, #isNotTrue', function () {
       assert.isTrue(true, 'true is true');
       assert.isTrue(!!'double negation', 'Double negation of a truthy value is true');
-      assert.isNotTrue({ value: 'truthy' }, 'Objects are truthy, but are not boolean values');
+      assert.isTrue({ value: 'truthy' }, 'Objects are truthy, but are not boolean values');
     });
   });
 
